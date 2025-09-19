@@ -49,9 +49,10 @@ nav {
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: var(--primary-color);   
+    text-transform:uppercase
 }
 .company-name{
    margin-left:-26px 
@@ -653,4 +654,5 @@ footer {
         min-height: 48px;
     }
 }
+
 
