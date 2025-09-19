@@ -110,3 +110,25 @@ window.addEventListener('scroll', () => {
     
     lastScroll = currentScroll;
 });
+
+// Hamburger Menu Toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    hamburger.querySelector('i').classList.toggle('fa-bars');
+    hamburger.querySelector('i').classList.toggle('fa-times');
+    // Prevent body scrolling when menu is open
+    document.body.style.overflow = navLinks.classList.contains('show') ? 'hidden' : 'auto';
+});
+
+// Close menu when a nav link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        hamburger.querySelector('i').classList.add('fa-bars');
+        hamburger.querySelector('i').classList.remove('fa-times');
+        document.body.style.overflow = 'auto';
+    });
+});
