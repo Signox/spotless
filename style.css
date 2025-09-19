@@ -20,7 +20,7 @@
     --transition: all 0.5s ease;
 }
 
-/* Base Styles use prefered style else sans-serif */
+/* Base Styles */
 body {
     font-family: 'Segoe UI', sans-serif, Tahoma, Geneva, Verdana;
     line-height: 1.6;
@@ -58,6 +58,7 @@ nav {
     display: flex;
     list-style: none;
     gap: 2rem;
+    transition: var(--transition);
 }
 
 .nav-links a {
@@ -79,6 +80,11 @@ nav {
     font-size: 1.5rem;
     color: var(--primary-color);
     cursor: pointer;
+    transition: var(--transition);
+}
+
+.hamburger:hover {
+    color: var(--secondary-color);
 }
 
 /* Hero Section */
@@ -542,15 +548,26 @@ footer {
         background: var(--white);
         padding: 1rem;
         box-shadow: var(--shadow);
+        transform: translateY(-20px);
+        opacity: 0;
+        visibility: hidden;
     }
 
     .nav-links.show {
         display: flex;
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
     }
 
     .nav-links a {
         padding: 1rem;
         font-size: 1.1rem;
+        border-bottom: 1px solid #E2E8F0;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
     }
 
     .hero h1 {
@@ -583,17 +600,19 @@ footer {
     }
 
     .feature-card {
-        transform: scale(0.9) rotate(3deg); /* Reduced for mobile */
+        transform: translateY(50px);
+        opacity: 0;
     }
 
     .feature-card.animate {
-        animation: pop-mobile 0.3s ease-out forwards;
+        transform: translateY(0);
+        opacity: 1;
+        animation: slide-up 0.5s ease-out forwards;
     }
 
-    @keyframes pop-mobile {
-        0% { transform: scale(0.9); }
-        50% { transform: scale(1.02); }
-        100% { transform: scale(1); }
+    @keyframes slide-up {
+        0% { transform: translateY(50px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
     }
 }
 
