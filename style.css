@@ -49,9 +49,9 @@ nav {
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--primary-color);    
     text-transform:uppercase;
 }
 
@@ -641,6 +641,7 @@ footer {
         min-height: 48px;
     }
 }
+
 
 
 
