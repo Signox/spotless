@@ -51,11 +51,11 @@ nav {
 .logo {
     font-size: 1.2rem;
     font-weight: bold;
-    color: var(--primary-color);   
-    text-transform:uppercase
+    color: var(--primary-color); 
 }
 .company-name{
-   margin-left:-26px 
+   margin-left:-26px ;  
+   text-transform:uppercase;
 }
 
 .nav-links {
@@ -654,5 +654,6 @@ footer {
         min-height: 48px;
     }
 }
+
 
 
