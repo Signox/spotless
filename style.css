@@ -52,6 +52,7 @@ nav {
     font-size: 2rem;
     font-weight: bold;
     color: var(--primary-color);
+    text-transform:uppercase;
 }
 
 .nav-links {
@@ -640,5 +641,6 @@ footer {
         min-height: 48px;
     }
 }
+
 
 
