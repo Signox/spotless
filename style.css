@@ -54,7 +54,7 @@ nav {
     color: var(--primary-color); 
 }
 .company-name{
-   margin-left:-16px ;  
+   margin-left:-10px ;  
    text-transform:uppercase;
 }
 
@@ -654,6 +654,7 @@ footer {
         min-height: 48px;
     }
 }
+
 
 
 
